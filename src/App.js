@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as d3 from 'd3'
+import textures from './textures';
 import ResponsibleCanvas from './ResponsibleCanvas'
 
 
@@ -26,12 +27,15 @@ const stackOverflow = (svg, width) => {
     var arcSize = (6 * width / 100);
     var innerRadius = arcSize * 3;
 
+
+
+
     var data = [
-        { value: 45, label: "label_1", color: '#ff0000' },
-        { value: 33, label: "label_2", color: '#00ff00' },
-        { value: 66, label: "label_3", color: '#0000ff' },
-        { value: 50, label: "label_4", color: '#ffff00' },
-        { value: 90, label: "label_5", color: '#ff0099' }
+        { value: 45, label: "label_1", color: textures.next(svg) },
+        { value: 33, label: "label_2", color: textures.next(svg) },
+        { value: 66, label: "label_3", color: textures.next(svg) },
+        { value: 50, label: "label_4", color: textures.next(svg) },
+        { value: 90, label: "label_5", color: textures.next(svg) }
     ];
 
 
